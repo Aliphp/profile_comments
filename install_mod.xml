@@ -354,7 +354,7 @@
 					<!-- IF comment.S_COMDELETE_ALLOWED --><li class="delete-icon"><a href="{comment.U_COMMENT_DELETE}" title="{U_COMMENT_DELETE}"><span>{L_DELETE_COMMENT}</span></a></li><!-- ENDIF -->
 				</ul>
 				{comment.COMMENT_DATE}
-				<div class="commentcontent" style="padding-top:10px;">
+				<div class="commentcontent" style="padding-top:10px; padding-bottom: 10px;">
 					<div class="comtext" style="font-size:12px;">
 					{comment.TEXT}
 					</div>
