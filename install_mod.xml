@@ -171,7 +171,7 @@
 					{
 						include($phpbb_root_path . 'includes/functions_privmsgs.' . $phpEx);
 						
-						$comment_pm_subject = utf8_normalize_nfc($user->lang('PROFILR_COMMENT_PM_TITLE'));
+						$comment_pm_subject = utf8_normalize_nfc($user->lang('PROFILE_COMMENT_PM_TITLE'));
 						$comment_pm_text    = "".sprintf($user->lang['PROFILE_COMMENT_PM'], '<a href="' . append_sid("{$phpbb_root_path}memberlist.$phpEx", 'mode=viewprofile&amp;&amp;u=' . $user_id) . '">', '</a>',$user->data['username'], '<br />[quote]'.utf8_normalize_nfc(request_var('commentcontent', '', true)).'[/quote]');
 						
 						$poll = $uid = $bitfield = $options = ''; 

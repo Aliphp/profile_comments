@@ -1,4 +1,8 @@
 <?php
+if (!defined('IN_PHPBB'))
+{
+	exit;
+}
 /** 
 *
 * profilecomments [english]
@@ -47,7 +51,8 @@ $lang = array_merge($lang, array(
 	'NO_PROFILE_COMMENT'			=> 'دیدگاهی برای نمایش موجود نیست.',
 	'NOT_ALLOWED_EDIT_COMMENT'		=> 'اجازه ویرایش این دیدگاه را ندارید.',
 	'PROFILE_COMMENT_PM'			=> 'دیدگاه جدیدی در %sپروفایل شما%s توسط %s ارسال شده است: %s',
-	'PROFILR_COMMENT_PM_TITLE'		=> 'اطلاع رسانی دیدگاه جدید',
+	'PROFILE_COMMENT_PM_TITLE'		=> 'اطلاع رسانی دیدگاه جدید',
+	'PROFILE_COMMENTS_MOD'			=> 'افزونه ارسال دیدگاه در پروفایل',
 	'SEND_COMMENT'					=> 'ارسال',
 	'SEND_COMMENT_BOX'				=> 'ارسال دیدگاه',
 	'SQL_ERROR'						=> 'خطای پایگاه داده روی داد.',

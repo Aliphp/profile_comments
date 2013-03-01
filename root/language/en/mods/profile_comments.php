@@ -1,4 +1,8 @@
 <?php
+if (!defined('IN_PHPBB'))
+{
+	exit;
+}
 /** 
 *
 * profilecomments [english]
@@ -47,7 +51,8 @@ $lang = array_merge($lang, array(
 	'NO_PROFILE_COMMENT'			=> 'There is no comment to display.',
 	'NOT_ALLOWED_EDIT_COMMENT'		=> 'You are not allowed to edit this comment.',
 	'PROFILE_COMMENT_PM'			=> '%sYour profile%s has recieved new comment by %s: %s',
-	'PROFILR_COMMENT_PM_TITLE'		=> 'New comment notification',
+	'PROFILE_COMMENT_PM_TITLE'		=> 'New comment notification',
+	'PROFILE_COMMENTS_MOD'			=> 'Profile comments MOD',
 	'SEND_COMMENT'					=> 'Send',
 	'SEND_COMMENT_BOX'				=> 'Send a comment',
 	'SQL_ERROR'						=> 'An sql error occured.',

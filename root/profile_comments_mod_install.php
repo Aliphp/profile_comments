@@ -121,7 +121,7 @@ $versions = array(
 		'module_add' => array(
 			array('acp', 'ACP_CAT_DOT_MODS', 'ACP_PROFILE_COMMENTS'),
 
-			array('acp', 'ACP_COMMENTS', array(
+			array('acp', 'ACP_PROFILE_COMMENTS', array(
 					'module_basename'		=> 'profile_comments',
 					'modes'					=> array('settings'),
 				),
