@@ -102,7 +102,7 @@ class comments
 				PROFILE_COMMENTS_TABLE => 'c',
 				USERS_TABLE 		   => 'u'
 			),
-			'WHERE'     =>  'c.profile_id = u.user_id
+			'WHERE'     =>  'c.poster_id = u.user_id
 						AND c.profile_id = ' . $user_id,
 
 			'ORDER_BY'  => 'c.comment_time '. $config['profile_comments_order'],
