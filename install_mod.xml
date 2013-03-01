@@ -328,6 +328,7 @@
 	<span class="corners-bottom"><span></span></span></div>
 </div>
 <!-- ENDIF -->
+
 </form>]]></find>
 				<action type="after-add"><![CDATA[<!-- IF PROFILE_COMMENTS_ENABLE -->
 <div class="panel bg2">
