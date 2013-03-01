@@ -159,6 +159,7 @@ class comments
 					'S_COMDELETE_ALLOWED'	=> $comdelete_allowed,
 					'U_COMMENT_EDIT'		=> append_sid("{$phpbb_root_path}memberlist.$phpEx", 'mode=viewprofile&amp;comment=edit&amp;cid='.$row['comment_id'].'' . (($start) ? "&amp;start=$start" : '') .'&amp;u=' . $user_id . '#message-box'),
 					'U_COMMENT_DELETE'		=> append_sid("{$phpbb_root_path}memberlist.$phpEx", 'mode=viewprofile&amp;comment=delete&amp;cid='.$row['comment_id'].'&amp;u=' . $user_id),
+					'U_PROFILE'				=>  append_sid("{$phpbb_root_path}memberlist.$phpEx", "mode=viewprofile&amp;u=" .$row['poster_id']. ""),
 				));
 		}
 		$db->sql_freeresult($result);
