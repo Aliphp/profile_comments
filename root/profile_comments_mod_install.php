@@ -72,19 +72,29 @@ $versions = array(
 		),
 		
 		'permission_set' => array(
-			array('GUESTS', 'u_see_profile_comments', 'group'),
-			array('REGISTERED', 'u_bbcode_profile_comments', 'group'),
-			array('REGISTERED', 'u_delete_own_profile_comments', 'group'),
-			array('REGISTERED', 'u_edit_own_profile_comments', 'group'),
-			array('REGISTERED', 'u_flash_profile_comments', 'group'),
-			array('REGISTERED', 'u_img_profile_comments', 'group'),
-			array('REGISTERED', 'u_see_profile_comments', 'group'),
-			array('REGISTERED', 'u_send_profile_comments', 'group'),
-			array('REGISTERED', 'u_smilies_profile_comments', 'group'),
-			array('GLOBAL_MODERATORS', 'm_delete_profile_comments', 'group'),
-			array('GLOBAL_MODERATORS', 'm_edit_profile_comments', 'group'),
-			array('ADMINISTRATORS', 'm_edit_profile_comments', 'group'),
-			array('ADMINISTRATORS', 'm_delete_profile_comments', 'group'),
+			
+			array('REGISTERED', array(
+				'u_bbcode_profile_comments',
+				'u_delete_own_profile_comments',
+				'u_edit_own_profile_comments',
+				'u_flash_profile_comments',
+				'u_img_profile_comments',
+				'u_see_profile_comments',
+				'u_send_profile_comments',
+				'u_smilies_profile_comments',
+			), 'group'),
+
+			array('ROLE_FORUM_READONLY', 'u_see_profile_comments', 'role'),
+						
+			array('ROLE_MOD_FULL', array(
+				'm_edit_profile_comments',
+				'm_delete_profile_comments',
+			), 'role'),
+			
+			array('ROLE_MOD_STANDARD', array(
+				'm_edit_profile_comments',
+				'm_delete_profile_comments',
+			), 'role'),
 		),
 
 		'table_add' => array(
