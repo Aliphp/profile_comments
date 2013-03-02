@@ -49,6 +49,7 @@ $lang = array_merge($lang, array(
 	'EDIT_COMMENT'					=> 'ویرایش دیدگاه',
 	'NO_COMMENT_ID'					=> 'دیدگاه انتخاب شده موجود نیست.',
 	'NO_PROFILE_COMMENT'			=> 'دیدگاهی برای نمایش موجود نیست.',
+	'NOT_ALLOWED_DELETE_COMMENT'	=> 'اجازه حذف این دیدگاه را ندارید.',
 	'NOT_ALLOWED_EDIT_COMMENT'		=> 'اجازه ویرایش این دیدگاه را ندارید.',
 	'PROFILE_COMMENT_PM'			=> 'دیدگاه جدیدی در %sپروفایل شما%s توسط %s ارسال شده است: %s',
 	'PROFILE_COMMENT_PM_TITLE'		=> 'اطلاع رسانی دیدگاه جدید',

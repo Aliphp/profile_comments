@@ -49,6 +49,7 @@ $lang = array_merge($lang, array(
 	'EDIT_COMMENT'					=> 'Edit comment',
 	'NO_COMMENT_ID'					=> 'The requested comment does not exist.',
 	'NO_PROFILE_COMMENT'			=> 'There is no comment to display.',
+	'NOT_ALLOWED_DELETE_COMMENT'	=> 'You are not allowed to delete this comment.',
 	'NOT_ALLOWED_EDIT_COMMENT'		=> 'You are not allowed to edit this comment.',
 	'PROFILE_COMMENT_PM'			=> '%sYour profile%s has recieved new comment by %s: %s',
 	'PROFILE_COMMENT_PM_TITLE'		=> 'New comment notification',

@@ -142,8 +142,7 @@
 					}
 					
 				$uid = $bitfield = $options = '';
-				$allow_bbcode = $allow_urls = $allow_smilies = true;
-				generate_text_for_storage($text, $uid, $bitfield, $options, $allow_bbcode, $allow_urls, $allow_smilies);
+				$comments->store($text, $uid, $bitfield, $options, $bbcode_status, $url_status, $smilies_status, $quote_status, $img_status, $url_status, $flash_status);
 				
 				if($comment == 'submit' && $comment_submit)
 				{
@@ -159,9 +158,9 @@
 						'bbcode_uid'        => $uid,
 						'bbcode_bitfield'   => $bitfield,
 						'bbcode_options'    => $options,
-						'enable_bbcode'     => $allow_bbcode,
-						'enable_magic_url'  => $allow_urls,
-						'enable_smilies'    => $allow_smilies,
+						'enable_bbcode'     => ($bbcode_status == true) ? 1 : 0,
+						'enable_magic_url'  => ($url_status == true) ? 1 : 0,
+						'enable_smilies'    => ($smilies_status == true) ? 1 : 0,
 					);
 					
 					$runsubmit = $comments->submit($input);
@@ -175,8 +174,7 @@
 						$comment_pm_text    = "".sprintf($user->lang['PROFILE_COMMENT_PM'], '<a href="' . append_sid("{$phpbb_root_path}memberlist.$phpEx", 'mode=viewprofile&amp;&amp;u=' . $user_id) . '">', '</a>',$user->data['username'], '<br />[quote]'.utf8_normalize_nfc(request_var('commentcontent', '', true)).'[/quote]');
 						
 						$poll = $uid = $bitfield = $options = ''; 
-						generate_text_for_storage($comment_pm_subject, $uid, $bitfield, $options, false, false, false);
-						generate_text_for_storage($comment_pm_text, $uid, $bitfield, $options, true, true, true);
+						$comments->store($comment_pm_text, $uid, $bitfield, $options, $bbcode_status, $url_status, $smilies_status, $quote_status, $img_status, $url_status, $flash_status);
 
 							$data = array( 
 								'address_list'      => array ('u' => array($user_id => 'to')),
@@ -185,8 +183,8 @@
 								'icon_id'           => 0,
 								'from_user_ip'      => $user->data['user_ip'],
 								 
-								'enable_bbcode'     => true,
-								'enable_smilies'    => true,
+								'enable_bbcode'     => ($bbcode_status == true) ? 1 : 0,
+								'enable_smilies'    => ($smilies_status == true) ? 1 : 0,
 								'enable_urls'       => true,
 								'enable_sig'        => true,
 
@@ -243,8 +241,7 @@
 							}
 							
 						$uid = $bitfield = $options = '';
-						$allow_bbcode = $allow_urls = $allow_smilies = true;
-						generate_text_for_storage($edittext, $uid, $bitfield, $options, $allow_bbcode, $allow_urls, $allow_smilies);
+						$comments->store($edittext, $uid, $bitfield, $options, $bbcode_status, $url_status, $smilies_status, $quote_status, $img_status, $url_status, $flash_status);
 						
 						$input = array(
 								'text'              => $edittext,

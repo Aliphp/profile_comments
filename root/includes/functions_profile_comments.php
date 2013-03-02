@@ -70,6 +70,43 @@ class comments
 	}
 	
 	/**
+	* Customised version of generate_text_for_storage
+	*/
+	function store(&$text, &$uid, &$bitfield, &$flags, $allow_bbcode, $allow_urls, $allow_smilies, $quote_status, $img_status, $url_status, $flash_status)
+	{
+		global $phpbb_root_path, $phpEx;
+
+		$uid = $bitfield = '';
+		$flags = (($allow_bbcode) ? OPTION_FLAG_BBCODE : 0) + (($allow_smilies) ? OPTION_FLAG_SMILIES : 0) + (($allow_urls) ? OPTION_FLAG_LINKS : 0);
+
+		if (!$text)
+		{
+			return;
+		}
+
+		if (!class_exists('parse_message'))
+		{
+			include($phpbb_root_path . 'includes/message_parser.' . $phpEx);
+		}
+
+		$message_parser = new parse_message($text);
+		$message_parser->parse($allow_bbcode, $allow_urls, $allow_smilies, $img_status, $flash_status, $quote_status, $url_status);
+
+		$text = $message_parser->message;
+		$uid = $message_parser->bbcode_uid;
+
+		// If the bbcode_bitfield is empty, there is no need for the uid to be stored.
+		if (!$message_parser->bbcode_bitfield)
+		{
+			$uid = '';
+		}
+
+		$bitfield = $message_parser->bbcode_bitfield;
+
+		return;
+	}
+	
+	/**
 	* Simplify error triggering
 	*@param string $text text of error
 	*@param string $linktext text of error link
