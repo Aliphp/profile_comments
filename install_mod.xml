@@ -327,7 +327,7 @@
 <!-- ENDIF -->
 
 </form>]]></find>
-				<action type="after-add"><![CDATA[<!-- IF PROFILE_COMMENTS_ENABLE -->
+				<action type="after-add"><![CDATA[<!-- IF PROFILE_COMMENTS_ENABLE --><!-- IF COMMENTS_ACL_SEE or COMMENTS_ACL_SEND -->
 <div class="panel bg2">
 	<div class="inner"><span class="corners-top"><span></span></span>
 	
@@ -462,7 +462,7 @@
 
 	<span class="corners-bottom"><span></span></span>
 </div>
-<!-- ENDIF -->]]></action>
+<!-- ENDIF --><!-- ENDIF -->]]></action>
 			</edit>
 		</open>
 		<php-installer><![CDATA[profile_comments_mod_install.php]]></php-installer>
