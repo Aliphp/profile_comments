@@ -84,7 +84,7 @@ $versions = array(
 			array('GLOBAL_MODERATORS', 'm_delete_profile_comments', 'group'),
 			array('GLOBAL_MODERATORS', 'm_edit_profile_comments', 'group'),
 			array('ADMINISTRATORS', 'm_edit_profile_comments', 'group'),
-			array('ADMINISTRATORS', 'm_edit_profile_comments', 'group'),
+			array('ADMINISTRATORS', 'm_delete_profile_comments', 'group'),
 		),
 
 		'table_add' => array(
