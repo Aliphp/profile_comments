@@ -248,9 +248,9 @@
 								'bbcode_uid'        => $uid,
 								'bbcode_bitfield'   => $bitfield,
 								'bbcode_options'    => $options,
-								'enable_bbcode'     => $allow_bbcode,
-								'enable_magic_url'  => $allow_urls,
-								'enable_smilies'    => $allow_smilies,
+								'enable_bbcode'     => ($bbcode_status == true) ? 1 : 0,
+								'enable_magic_url'  => ($url_status == true) ? 1 : 0,
+								'enable_smilies'    => ($smilies_status == true) ? 1 : 0,
 							);
 							
 						$runedit = $comments->edit($input, $comment_id);
